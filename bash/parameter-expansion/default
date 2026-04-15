@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+# Description
+
+
+name=""
+echo "Hello, ${name:=user}"
+echo "${name}"
+
+
+

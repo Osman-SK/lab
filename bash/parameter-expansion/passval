@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Password Validation Script
+
+
+password="secretpass"
+echo "Length: ${#password}"
+
+# Validation
+
+if [[ ${#password} -lt 8 ]]; then
+    echo "Password too short"
+    exit 1
+fi
+
+
+

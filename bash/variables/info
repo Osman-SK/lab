@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Dotfiles Information
+
+
+dotfile_dir="${HOME}/dotfiles"
+num_of_files="$(ls "${dotfile_dir}" | wc -l)"
+
+echo ""
+echo "---Dotfiles Info---"
+echo "User is $USER"
+echo "Dotfiles location: ${dotfile_dir}"
+echo "Number of files: ${num_of_files}"
+echo ""
