@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case $1 in
+	apple)
+		echo "green"
+		;;
+	orange)
+		echo "orange"
+		;;
+	banana)
+		echo "yellow"
+		;;
+	*)
+		echo "usage: $0 {fruitName}"
+		;;
+esac
+
+
+
