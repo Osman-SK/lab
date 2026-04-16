@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for eachFile in $HOME/dotfiles/*; do
+	[[ -f "$eachFile" ]] || continue
+	echo "file: $eachFile"
+done

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for eachFile in *.txt; do
+	# handle case for no file match
+	[[ -f "$eachFile" ]] || continue 
+	echo "processing $eachFile"
+done
