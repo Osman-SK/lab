@@ -42,7 +42,7 @@ set wildmenu                     " Better command-line completion
 set laststatus=2                 " Always show status line
 
 " -------------------------
-" Filetype-specific indentation (Recommended)
+" Filetype-specific indentation
 " -------------------------
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType go     setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
