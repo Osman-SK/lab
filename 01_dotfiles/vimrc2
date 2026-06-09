@@ -1,0 +1,56 @@
+" ============================================
+" Cross-platform .vimrc (Debian + macOS)
+" ============================================
+
+" Use Vim settings, rather than Vi settings
+set nocompatible
+
+" Enable filetype detection + plugins + indentation
+filetype plugin indent on
+
+" -------------------------
+" Indentation (sensible defaults)
+" -------------------------
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set smartindent
+
+" -------------------------
+" Quality of life
+" -------------------------
+set backspace=indent,eol,start   " Make backspace work properly
+syntax on                        " Enable syntax highlighting
+set number                       " Show line numbers (optional)
+highlight LineNr ctermfg=242 guifg=#6c6c6c " Make line numbers easier on the eyes (gray)
+
+set ruler                        " Show cursor position
+
+" Highlight trailing whitespace
+autocmd BufRead,BufNewFile * match Error /\s\+$/
+
+" -------------------------
+" Better defaults
+" -------------------------
+set incsearch                    " Incremental search
+set hlsearch                     " Highlight search results
+set ignorecase                   " Case-insensitive search...
+set smartcase                    " ...unless search contains uppercase
+set wildmenu                     " Better command-line completion
+set laststatus=2                 " Always show status line
+
+" -------------------------
+" Filetype-specific indentation (Recommended)
+" -------------------------
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType go     setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType make   setlocal noexpandtab
+autocmd FileType yaml   setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" -------------------------
+" Optional but useful
+" -------------------------
+" set clipboard=unnamedplus     " Use system clipboard (Linux)
+" set mouse=a                     " Enable mouse support
