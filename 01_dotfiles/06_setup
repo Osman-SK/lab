@@ -7,7 +7,6 @@ cp bashrc* ~/.bashrc
 echo "bashrc# copied to ~/.bashrc"
 
 . ~/.bashrc
-
 echo "bashrc# sourced to current shell"
 
 # vim
