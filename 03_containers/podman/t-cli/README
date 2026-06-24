@@ -1,0 +1,17 @@
+# Host Volume Setup
+
+sudo mkdir -p /mnt/torrents
+sudo chown 1000:1000 /mnt/torrents
+sudo chmod 755 /mnt/torrents
+
+# Build
+podman build -t torrent-cli .
+
+# Run
+podman run -it --rm \
+  --name torrent-cli \
+  --user 1000:1000 \
+  --security-opt no-new-privileges \
+  --cap-drop ALL \
+  -v /mnt/torrents:/downloads:Z \
+  torrent-cli
