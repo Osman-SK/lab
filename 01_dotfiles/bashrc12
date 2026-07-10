@@ -37,7 +37,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   export PATH="$HOME/google-cloud-sdk/bin:$PATH"
 
   # bash-completion@2 for brew-bash
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 fi
 
@@ -63,7 +63,7 @@ if [ -x /usr/bin/dircolors ]; then
 
     alias vdir='vdir --color=auto'
     alias dir='dir --color=auto'
- 
+
     alias ip='ip --color=auto'
 
     alias grep='grep --color=auto'
@@ -75,11 +75,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # PS1 Escape Sequences:
-# \u for username, 
-# \h for hostname, 
-# \w for the pwd, 
+# \u for username,
+# \h for hostname,
+# \w for the pwd,
 # \W for base pwd,
-# $ for users, # for root. 
+# $ for users, # for root.
 
 # former white background used:
 # PS1='\u@\h \W \$ '
@@ -87,7 +87,7 @@ fi
 # Colored prompt - light on the eyes (soft cyan + blue)
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\W \[\033[00m\]\$ '
 
-# History settings 
+# History settings
 shopt -s histappend          # append, don't overwrite
 HISTCONTROL=ignoreboth       # ignore duplicates and space-prefixed
 HISTSIZE=10000
@@ -137,15 +137,15 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH" # Mischa, per some convention i do not rmbr.
 
-# RANCHER DESKTOP 
+# RANCHER DESKTOP
 
 # Rancher Desktop (macOS only)
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT) 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 
 [[ "$OSTYPE" == darwin* ]] && [ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
 
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT) 
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Load bash completion (cross-platform)
 for f in \
