@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# bashrc
+# Copy bashrc to ~/.bashrc and source
+
+
+echo ""
+
+echo "Do not forget to run within the same directory as setup-file"
+
+echo ""
+echo ""
+
+cp bashrc* ~/.bashrc
+echo "bashrc# copied to ~/.bashrc"
+
+. ~/.bashrc
+echo "bashrc# sourced to current shell"
+echo "you might still have to use source ./setup# for the current shell"
+
+echo ""
+echo ""
+
+# vim
+# Copy vim to $HOME and source via vim
+
+cp vimrc* ~/.vimrc # vimrc* so that vimrc2-3-4 copies!
+echo "vimrc# copied to ~/.vimrc"
+
+echo "vimrc# to ~/.vimrc, to source use ":so ~/.vimrc" within vim"
+
+echo ""
