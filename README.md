@@ -1,5 +1,3 @@
-# Welcome!
-
 # lab
 
 Welcome to OSK's lab.
