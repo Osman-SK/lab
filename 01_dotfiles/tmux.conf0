@@ -1,0 +1,21 @@
+set -g mouse on
+
+# Pipe all copies (including mouse drag-end) to the macOS clipboard
+set -s copy-command 'pbcopy'
+
+# Avoid conflicts with OSC 52
+set -s set-clipboard off
+
+# scroll further back
+set -g history-limit 102400
+
+# Start counting from 1 instead of 0
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Reload config file with (Ctrl B) + R (or r?)
+bind r source-file ~/.tmux.conf \; display "Config reloaded!"
+
+# Prefix (Ctrl B) + C to start new pane on current path
+bind c new-window -c '#{pane_current_path}'
+
