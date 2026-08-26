@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# bashrc
+
+
+# Copy bashrc to ~/.bashrc and source
+
+echo ""
+
+echo "Do not forget to run within the same directory as setup-file"
+
+echo ""
+echo ""
+
+sops --decrypt bashrc* > ~/.bashrc
+echo "bashrc# copied to ~/.bashrc"
+
+. ~/.bashrc
+echo "bashrc# sourced to current shell"
+echo "you might still have to use source ./setup# for the current shell"
+
+echo ""
+echo ""
+
+# vim
+# Copy vim to $HOME and source via vim
+
+cp vimrc* ~/.vimrc # vimrc* so that vimrc2-3-4 copies!
+echo "vimrc# copied to ~/.vimrc"
+echo "vimrc# to ~/.vimrc, to source use ":so ~/.vimrc" within vim"
+
+echo ""
+echo ""
+
+cp tmux.conf* ~/.tmux.conf
+echo "tmux.conf# copied to ~/.tmux.conf"
+tmux source-file ~/.tmux.conf
+echo "~/.tmux.conf sourced, for current shell you might still have to:"
+echo "Prefix[CTRL + B] + r: Reload Config in tmux "
+
+echo ""
+
+
+
