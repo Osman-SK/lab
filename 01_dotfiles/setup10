@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # bashrc
-
-
 # Copy bashrc to ~/.bashrc and source
 
 echo ""
@@ -32,6 +30,8 @@ echo "vimrc# to ~/.vimrc, to source use ":so ~/.vimrc" within vim"
 echo ""
 echo ""
 
+# tmux
+
 cp tmux.conf* ~/.tmux.conf
 echo "tmux.conf# copied to ~/.tmux.conf"
 tmux source-file ~/.tmux.conf
@@ -39,6 +39,3 @@ echo "~/.tmux.conf sourced, for current shell you might still have to:"
 echo "Prefix[CTRL + B] + r: Reload Config in tmux "
 
 echo ""
-
-
-
