@@ -25,3 +25,4 @@ You will find a collection of experiments and archives with dotfile setups, bash
 - GitHub: [Osman-SK](https://github.com/Osman-SK)
 - X: [@OSK546](https://x.com/OSK546)
 
+---
