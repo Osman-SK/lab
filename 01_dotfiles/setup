@@ -10,8 +10,10 @@ echo "Do not forget to run within the same directory as setup-file"
 echo ""
 echo ""
 
-sops --decrypt bashrc* > ~/.bashrc
-echo "bashrc# copied to ~/.bashrc"
+
+echo "----bashrc:"
+sops --decrypt bashrc > ~/.bashrc
+echo "bashrc decrypted and copied to ~/.bashrc"
 
 . ~/.bashrc
 echo "bashrc# sourced to current shell"
@@ -23,17 +25,18 @@ echo ""
 # vim
 # Copy vim to $HOME and source via vim
 
-cp vimrc* ~/.vimrc # vimrc* so that vimrc2-3-4 copies!
-echo "vimrc# copied to ~/.vimrc"
-echo "vimrc# to ~/.vimrc, to source use ":so ~/.vimrc" within vim"
+echo "----vimrc:"
+cp vimrc ~/.vimrc # vimrc* so that vimrc2-3-4 copies!
+echo "vimrc copied to ~/.vimrc"
+echo "vimrc to ~/.vimrc, to source use ":so ~/.vimrc" within vim"
 
 echo ""
 echo ""
 
 # tmux
-
-cp tmux.conf* ~/.tmux.conf
-echo "tmux.conf# copied to ~/.tmux.conf"
+echo "----tmux:"
+cp tmux.conf ~/.tmux.conf
+echo "tmux.conf copied to ~/.tmux.conf"
 tmux source-file ~/.tmux.conf
 echo "~/.tmux.conf sourced, for current shell you might still have to:"
 echo "Prefix[CTRL + B] + r: Reload Config in tmux "
